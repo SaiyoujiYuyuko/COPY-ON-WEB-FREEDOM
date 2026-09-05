@@ -18,15 +18,16 @@ Auto Copy Selected Text and Remove Copy Restrictions
 
 ### 主要功能
 - 选中文本后约 0.3 秒自动复制（可关闭）
+- 输入框、文本区域和可编辑区域内默认不自动复制，可通过 Tampermonkey 菜单单独开启
 - 强制解除常见的网页复制限制（user-select、oncopy、contextmenu 等）
 - 支持三种复制格式（可切换）：
   - 纯文本（默认）
   - 文本 + 当前网页链接
   - HTML 片段（保留格式）
-- 复制成功/失败显示跟随面板的提示气泡（1.6秒自动消失）
+- 复制成功/失败提示可单独开关且默认显示；隐藏面板后仍在右下角显示（1.6秒自动消失）
 - 界面支持：简体中文、英文、日文、韩文（自动根据浏览器语言）
 - 小面板支持拖拽、点击开关、琥珀色主题、毛玻璃风格
-- Tampermonkey 菜单可快速切换：功能开关、面板显隐、格式循环
+- Tampermonkey 菜单可快速切换：功能开关、面板显隐、输入框复制、复制提示、格式循环
 
 极个别使用了多层Shadow DOM + 复杂事件穿透的网站可能仍有限制。
 
@@ -48,6 +49,8 @@ Auto Copy Selected Text and Remove Copy Restrictions
 - **右键 Tampermonkey 图标 → 用户脚本命令** 可快速：
   - 功能启用/停用
   - 面板显示/隐藏
+  - 输入框内自动复制启用/停用（默认停用）
+  - 复制提示显示/隐藏（默认显示）
   - 复制格式循环切换（TXT → URL → HTML）
 
 ### 最近更新（v5.2）
@@ -65,15 +68,16 @@ It provides a small draggable panel at the bottom-right corner for toggling feat
 
 ### Main Features
 - Auto copy selected text to clipboard (~0.3s delay)
+- Auto-copy inside inputs, text areas, and editable regions is disabled by default and can be enabled separately
 - Bypass common copy protections (user-select, oncopy, contextmenu, etc.)
 - Three copy formats (cycle via menu):
   - Plain text (default)
   - Text + current page URL
   - HTML fragment (preserves formatting)
-- Success/failure feedback bubble (follows the panel, disappears after 1.6s)
+- Success/failure feedback can be toggled separately and remains visible at the bottom-right when the panel is hidden (enabled by default, dismisses after 1.6s)
 - UI languages: Simplified Chinese, English, Japanese, Korean (auto-detect)
 - Draggable frosted-glass panel with amber accent
-- Tampermonkey menu to toggle: feature on/off, panel visibility, format
+- Tampermonkey menu to toggle: feature, panel, editable-field copying, copy feedback, and format
 
 ### Installation
 1. Install Tampermonkey extension  
@@ -93,6 +97,8 @@ It provides a small draggable panel at the bottom-right corner for toggling feat
 - Via Tampermonkey menu → quick toggle:
   - Enable/disable script
   - Show/hide floating button
+  - Enable/disable auto-copy in editable fields (disabled by default)
+  - Show/hide copy feedback (shown by default)
   - Cycle copy format (TXT → URL → HTML)
 
 ### Recent Update (v5.2)
